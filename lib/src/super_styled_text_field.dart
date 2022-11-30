@@ -24,6 +24,9 @@ class SuperStyledTextField extends StatelessWidget {
   /// padding for text field
   final EdgeInsets? errTextPadding;
 
+  /// text style for hint text / text field
+  final TextStyle? textStyle;
+
   /// text style for err text
   final TextStyle? errTextStyle;
 
@@ -39,6 +42,7 @@ class SuperStyledTextField extends StatelessWidget {
     this.icon,
     this.padding,
     this.errTextPadding,
+    this.textStyle,
     this.errTextStyle,
     this.cardColour,
   }) : super(key: key);
@@ -54,6 +58,7 @@ class SuperStyledTextField extends StatelessWidget {
               hintText: hintText,
               onChanged: onChanged,
               controller: controller,
+              textStyle: textStyle,
               padding: padding,
               cardColour: cardColour,
             ),
