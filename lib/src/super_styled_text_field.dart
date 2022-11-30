@@ -27,6 +27,9 @@ class SuperStyledTextField extends StatelessWidget {
   /// text style for err text
   final TextStyle? errTextStyle;
 
+  /// card colour
+  final Color? cardColour;
+
   const SuperStyledTextField({
     Key? key,
     required this.hintText,
@@ -37,6 +40,7 @@ class SuperStyledTextField extends StatelessWidget {
     this.padding,
     this.errTextPadding,
     this.errTextStyle,
+    this.cardColour,
   }) : super(key: key);
 
   @override
@@ -51,6 +55,7 @@ class SuperStyledTextField extends StatelessWidget {
               onChanged: onChanged,
               controller: controller,
               padding: padding,
+              cardColour: cardColour,
             ),
             ValueListenableBuilder<String?>(
               valueListenable: errorMessage ?? ValueNotifier(null),
