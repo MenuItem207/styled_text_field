@@ -39,6 +39,9 @@ class SuperStyledTextField extends StatelessWidget {
   /// elevation of card
   final double? cardElevation;
 
+  /// error height
+  final double? errorHeight;
+
   const SuperStyledTextField({
     Key? key,
     required this.hintText,
@@ -53,6 +56,7 @@ class SuperStyledTextField extends StatelessWidget {
     this.cardColour,
     this.cardBorder,
     this.cardElevation,
+    this.errorHeight,
   }) : super(key: key);
 
   @override
@@ -76,7 +80,7 @@ class SuperStyledTextField extends StatelessWidget {
               valueListenable: errorMessage ?? ValueNotifier(null),
               builder: (context, errorMessage, child) => AnimatedContainer(
                 duration: const Duration(milliseconds: 150),
-                height: errorMessage == null ? 0 : 15,
+                height: errorMessage == null ? 0 : errorHeight ?? 15,
                 child: Padding(
                   padding: errTextPadding ??
                       const EdgeInsets.only(left: 30, right: 30),
