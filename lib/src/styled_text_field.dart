@@ -7,6 +7,7 @@ class StyledTextField extends StatelessWidget {
   final TextEditingController? controller;
   final EdgeInsets? padding;
   final Color? cardColour;
+  final Color? cursorColour;
   final TextStyle? textStyle;
   final ShapeBorder? cardBorder;
   final double? cardElevation;
@@ -17,6 +18,7 @@ class StyledTextField extends StatelessWidget {
     this.controller,
     this.padding,
     this.cardColour,
+    this.cursorColour,
     this.textStyle,
     this.cardBorder,
     this.cardElevation,
@@ -45,6 +47,7 @@ class StyledTextField extends StatelessWidget {
           ),
           style: textStyle,
           onChanged: (value) => onChanged(value),
+          cursorColor: cursorColour,
         ),
       ),
     );

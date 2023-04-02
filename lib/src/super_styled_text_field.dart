@@ -33,6 +33,9 @@ class SuperStyledTextField extends StatelessWidget {
   /// card colour
   final Color? cardColour;
 
+  /// cursor colour
+  final Color? cursorColour;
+
   /// shape of card
   final ShapeBorder? cardBorder;
 
@@ -54,6 +57,7 @@ class SuperStyledTextField extends StatelessWidget {
     this.textStyle,
     this.errTextStyle,
     this.cardColour,
+    this.cursorColour,
     this.cardBorder,
     this.cardElevation,
     this.errorHeight,
@@ -75,6 +79,7 @@ class SuperStyledTextField extends StatelessWidget {
               cardColour: cardColour,
               cardBorder: cardBorder,
               cardElevation: cardElevation,
+              cursorColour: cursorColour,
             ),
             ValueListenableBuilder<String?>(
               valueListenable: errorMessage ?? ValueNotifier(null),
