@@ -12,6 +12,7 @@ class StyledTextField extends StatelessWidget {
   final ShapeBorder? cardBorder;
   final double? cardElevation;
   final TextCapitalization textCapitalization;
+  final bool obscureText;
   const StyledTextField({
     Key? key,
     required this.hintText,
@@ -24,6 +25,7 @@ class StyledTextField extends StatelessWidget {
     this.cardBorder,
     this.cardElevation,
     this.textCapitalization = TextCapitalization.none,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -51,6 +53,7 @@ class StyledTextField extends StatelessWidget {
           onChanged: (value) => onChanged(value),
           cursorColor: cursorColour,
           textCapitalization: textCapitalization,
+          obscureText: obscureText,
         ),
       ),
     );

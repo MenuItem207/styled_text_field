@@ -48,6 +48,9 @@ class SuperStyledTextField extends StatelessWidget {
   /// the capitalization behaviour of text
   final TextCapitalization textCapitalization;
 
+  /// whether or not to obscure the text
+  final bool obscureText;
+
   const SuperStyledTextField({
     Key? key,
     required this.hintText,
@@ -65,6 +68,7 @@ class SuperStyledTextField extends StatelessWidget {
     this.cardElevation,
     this.errorHeight,
     this.textCapitalization = TextCapitalization.none,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -85,6 +89,7 @@ class SuperStyledTextField extends StatelessWidget {
               cardElevation: cardElevation,
               cursorColour: cursorColour,
               textCapitalization: textCapitalization,
+              obscureText: obscureText,
             ),
             ValueListenableBuilder<String?>(
               valueListenable: errorMessage ?? ValueNotifier(null),
